@@ -815,7 +815,7 @@ GET    /api/dashboard/stats   # API statistik dashboard
 ### 🏠 Dashboard
 <div align="center">
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](public/screenshots/dashboard.png)
 *Dashboard dengan statistik real-time, chart interaktif, dan quick actions*
 
 </div>
@@ -824,13 +824,13 @@ GET    /api/dashboard/stats   # API statistik dashboard
 
 <div align="center">
 
-![Daftar Dosen](screenshots/dosen-index.png)
+![Daftar Dosen](public/screenshots/dosen-index.png)
 *List dosen dengan advanced search dan enhanced pagination*
 
-![Form Dosen](screenshots/dosen-create.png)
+![Form Dosen](public/screenshots/dosen-create.png)
 *Form tambah dosen dengan validasi real-time*
 
-![Edit Dosen](screenshots/dosen-edit.png)
+![Edit Dosen](public/screenshots/dosen-edit.png)
 *Form edit dosen dengan validasi real-time*
 
 </div>
@@ -839,13 +839,13 @@ GET    /api/dashboard/stats   # API statistik dashboard
 
 <div align="center">
 
-![Daftar Mata Kuliah](screenshots/mata-kuliah-index.png)
+![Daftar Mata Kuliah](public/screenshots/mata-kuliah-index.png)
 *Grid layout mata kuliah dengan unified search (nama atau SKS)*
 
-![Form Mata Kuliah](screenshots/mata-kuliah-create.png)
+![Form Mata Kuliah](public/screenshots/mata-kuliah-create.png)
 *Form tambah mata kuliah dengan dropdown dosen dan SKS validation*
 
-![Edit Mata Kuliah](screenshots/mata-kuliah-edit.png)
+![Edit Mata Kuliah](public/screenshots/mata-kuliah-edit.png)
 *Form edit mata kuliah dengan dropdown dosen dan SKS validation*
 
 </div>
