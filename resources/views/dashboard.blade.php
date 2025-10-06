@@ -212,6 +212,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Mata Kuliah per Dosen Chart
     const dosenCtx = document.getElementById('dosenChart').getContext('2d');
+    
     const dosenChart = new Chart(dosenCtx, {
         type: 'bar',
         data: {
@@ -220,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 label: 'Jumlah Mata Kuliah',
                 data: {!! json_encode($chartData['data']) !!},
                 backgroundColor: function(context) {
-                    const gradient = context.chart.canvas.getContext('2d').createLinearGradient(0, 0, 0, 400);
+                    const gradient = context.chart.canvas.getContext('2d').createLinearGradient(0, 400, 0, 0);
                     gradient.addColorStop(0, 'rgba(59, 130, 246, 0.8)');
                     gradient.addColorStop(1, 'rgba(147, 51, 234, 0.8)');
                     return gradient;
@@ -232,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }]
         },
         options: {
+            indexAxis: 'y', // Membuat bar chart horizontal dengan nama dosen di sumbu Y
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
@@ -257,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             scales: {
-                y: {
+                x: {
                     beginAtZero: true,
                     grid: {
                         color: 'rgba(255, 255, 255, 0.1)',
@@ -269,19 +271,38 @@ document.addEventListener('DOMContentLoaded', function() {
                             family: 'Inter',
                             size: 12
                         }
+                    },
+                    title: {
+                        display: true,
+                        // text: 'Jumlah Mata Kuliah',
+                        color: '#E5E7EB',
+                        font: {
+                            family: 'Inter',
+                            size: 14,
+                            weight: 'bold'
+                        }
                     }
                 },
-                x: {
+                y: {
                     grid: {
                         color: 'rgba(255, 255, 255, 0.1)',
                         borderColor: 'rgba(255, 255, 255, 0.2)'
                     },
                     ticks: {
                         color: '#E5E7EB',
-                        maxRotation: 45,
                         font: {
                             family: 'Inter',
                             size: 12
+                        }
+                    },
+                    title: {
+                        display: true,
+                        // text: 'Nama Dosen',
+                        color: '#E5E7EB',
+                        font: {
+                            family: 'Inter',
+                            size: 14,
+                            weight: 'bold'
                         }
                     }
                 }

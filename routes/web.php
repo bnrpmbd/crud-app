@@ -18,10 +18,10 @@ Route::get('/', function () {
         'data' => []
     ];
     
+    // Ambil semua dosen yang mengampu mata kuliah
     $dosenWithMk = Dosen::withCount('mataKuliahs')
         ->having('mata_kuliahs_count', '>', 0)
         ->orderBy('mata_kuliahs_count', 'desc')
-        ->limit(10)
         ->get();
     
     foreach ($dosenWithMk as $dosen) {
