@@ -44,7 +44,7 @@ class MataKuliahController extends Controller
     {
         $data = $request->validate([
             'nama' => 'required|string|max:100',
-            'sks' => 'required|integer|min:1|max:6',
+            'sks' => 'required|integer|min:2|max:4',
             'dosen_id' => 'required|exists:dosens,id',
         ]);
 
@@ -55,9 +55,10 @@ class MataKuliahController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(MataKuliah $mata_kuliah)
     {
-        //
+        $mata_kuliah->load('dosen');
+        return view('mata_kuliah.show', ['mataKuliah' => $mata_kuliah]);
     }
 
     public function edit(MataKuliah $mata_kuliah)

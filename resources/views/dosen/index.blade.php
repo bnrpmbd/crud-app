@@ -135,9 +135,9 @@
                                             <span class="text-white font-bold text-sm">{{ strtoupper(substr($dosen->nama, 0, 2)) }}</span>
                                         </div>
                                         <div>
-                                            <div class="text-white font-medium group-hover:text-cyber-blue transition-colors duration-200">
+                                            <a href="{{ route('dosen.show', $dosen) }}" class="text-white font-medium group-hover:text-cyber-blue transition-colors duration-200 hover:underline">
                                                 {{ $dosen->nama }}
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </td>
@@ -152,6 +152,11 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-center">
                                     <div class="flex justify-center space-x-2">
+                                        <a href="{{ route('dosen.show', $dosen) }}" 
+                                           class="cyber-button-sm bg-cyber-blue hover:bg-opacity-80" 
+                                           title="Lihat Detail Dosen">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
                                         <a href="{{ route('dosen.edit', $dosen) }}" 
                                            class="cyber-button-sm bg-cyber-purple hover:bg-opacity-80" 
                                            title="Edit Dosen">

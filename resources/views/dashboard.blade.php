@@ -149,7 +149,7 @@
                     <i class="fas fa-book-plus text-white text-xl"></i>
                 </div>
                 <p class="font-medium text-primary font-inter">Tambah Mata Kuliah</p>
-                <p class="text-xs text-muted mt-1">Buat mata kuliah dengan SKS 1-6</p>
+                <p class="text-xs text-muted mt-1">Buat mata kuliah dengan SKS 2-4</p>
             </a>
             <a href="{{ route('dosen.index') }}" class="group elegant-card p-6 text-center transition-all duration-300 hover:scale-105">
                 <div class="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:shadow-purple-500/25 transition-all duration-300">

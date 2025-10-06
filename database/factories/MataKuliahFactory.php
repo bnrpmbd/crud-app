@@ -9,7 +9,7 @@ class MataKuliahFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama' => $this->faker->word(),
+            'nama' => $this->faker->sentence(2, true),
             'sks' => $this->faker->numberBetween(2, 4),
 // PENTING: jangan set 'dosen_id' supaya tidak membuat dosen baru otomatis 
         ];
